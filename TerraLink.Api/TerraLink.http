@@ -4,4 +4,31 @@ GET http://localhost:5031
 GET http://localhost:5031/users
 
 ###
-GET http://localhost:5031/users/1
+GET http://localhost:5031/users/2
+
+###
+POST http://localhost:5031/users
+Content-Type: application/json
+
+{
+    "FullName": "Darwin",
+    "Email": "Darwin@example.com",
+    "Phone": "123-456-7890",
+    "Password": "password123",
+    "Role": "Client",
+    "Status": "Active"
+}
+
+###
+PUT http://localhost:5031/users/2
+Content-Type: application/json
+
+{
+    "EmployeeId": "TL-002",
+    "FullName": "Alice Smith",
+    "Email": "alice.smith@example.com",
+    "Phone": "987-654-3210",
+    "Password": "newpassword456",
+    "Role": "Admin",
+    "Status": "Active"
+}
